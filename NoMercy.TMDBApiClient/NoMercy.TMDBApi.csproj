@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp7.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Authors>NoMercy Entertainment</Authors>
+        <Description>The Effortless Encoder</Description>
+        <Copyright>(c) 2023 NoMercy Entertainment</Copyright>
+        <PackageProjectUrl>https://nomercy.tv</PackageProjectUrl>
+        <Company>NoMercy Entertainment</Company>
+        <Product>NoMercy TMDB API Client</Product>
+        <RootNamespace>NoMercy.TMDBAPI</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Remove="Database\**"/>
+        <EmbeddedResource Remove="Database\**"/>
+        <None Remove="Database\**"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="2.2.0"/>
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.1"/>
+        <PackageReference Include="System.Runtime" Version="4.3.1"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Update="Properties\Resources.Designer.cs">
+            <DesignTime>True</DesignTime>
+            <AutoGen>True</AutoGen>
+            <DependentUpon>Resources.resx</DependentUpon>
+        </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Update="Properties\Resources.resx">
+            <Generator>ResXFileCodeGenerator</Generator>
+            <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+        </EmbeddedResource>
+    </ItemGroup>
+
+</Project>
