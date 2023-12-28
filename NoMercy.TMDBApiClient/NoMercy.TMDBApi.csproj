@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>netcoreapp7.0</TargetFramework>
+        <TargetFramework>netcoreapp8.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <Authors>NoMercy Entertainment</Authors>
@@ -10,19 +10,19 @@
         <PackageProjectUrl>https://nomercy.tv</PackageProjectUrl>
         <Company>NoMercy Entertainment</Company>
         <Product>NoMercy TMDB API Client</Product>
-        <RootNamespace>NoMercy.TMDBAPI</RootNamespace>
+        <RootNamespace>NoMercy.TMDBApi</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Remove="Database\**"/>
-        <EmbeddedResource Remove="Database\**"/>
-        <None Remove="Database\**"/>
+        <Compile Remove="Database\**" />
+        <EmbeddedResource Remove="Database\**" />
+        <None Remove="Database\**" />
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="2.2.0"/>
-        <PackageReference Include="Newtonsoft.Json" Version="13.0.1"/>
-        <PackageReference Include="System.Runtime" Version="4.3.1"/>
+        <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="8.0.0" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+        <PackageReference Include="System.Runtime" Version="4.3.1" />
     </ItemGroup>
 
     <ItemGroup>
